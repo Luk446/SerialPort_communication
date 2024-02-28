@@ -54,7 +54,7 @@ namespace SerialPortExample
                     // from 0->1023 to 0->100
                     int normalizedMagnitude = Math.Min(100, Math.Max(0, magnitude)); // Ensure value is within [0, 100]
 
-                    // Update progress bar value poop
+                    // Update progress bar value
                     progressBar1.Value = normalizedMagnitude;
                 }
             }
