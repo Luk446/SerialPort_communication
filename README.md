@@ -1,3 +1,3 @@
-Serial Port communication in windows form
+User App for 3rd year Uni project
 
-combining serial bus output with C#
+Integrating Arduino Serial Output with windows form (.NET framework) [C#]
