@@ -4,14 +4,15 @@ using System.Windows.Forms;
 
 namespace SerialPortExample
 {
-    public partial class Form1 : Form
+    public partial class Small : Form
     {
         //private SerialPort serialPort; (commented due to error causing)
 
-        public Form1()
+        public Small()
         {
             InitializeComponent();
             InitializeSerialPort();
+            this.IsMdiContainer = true;
         }
         //Serial Port Init
         // establish communication with arduino 
@@ -78,6 +79,19 @@ namespace SerialPortExample
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is the first Ver BRua");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HomeScreen userInformation = new HomeScreen();
+            userInformation.Show();
+            this.Hide();
+            serialPort.Close();
         }
     }
 }

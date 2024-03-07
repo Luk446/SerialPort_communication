@@ -74,16 +74,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Small.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Small.Designer.cs">
+      <DependentUpon>Small.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LargeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LargeMain.Designer.cs">
+      <DependentUpon>LargeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MediumMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MediumMain.Designer.cs">
+      <DependentUpon>MediumMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Diagnostics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnostics.Designer.cs">
+      <DependentUpon>Diagnostics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeScreen.Designer.cs">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Small.resx">
+      <DependentUpon>Small.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LargeMain.resx">
+      <DependentUpon>LargeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MediumMain.resx">
+      <DependentUpon>MediumMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +134,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Diagnostics.resx">
+      <DependentUpon>Diagnostics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeScreen.resx">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
