@@ -59,10 +59,10 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(138, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(492, 48);
+            this.label2.Size = new System.Drawing.Size(499, 48);
             this.label2.TabIndex = 2;
             this.label2.Text = "Sofware - Luke Edgecombe\r\nMechatronics - James Baker\r\nMechanical Design - Hannah " +
-    "Little, Elena Kelleher, Douglas Yong, Jonny McMillan\r\n";
+    "Little, Elena Kelleher, Douglas Young, Jonny McMillan\r\n";
             // 
             // About
             // 

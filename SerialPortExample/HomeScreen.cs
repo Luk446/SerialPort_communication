@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlueMystic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +12,13 @@ using System.Windows.Forms;
 namespace SerialPortExample
 {
     public partial class HomeScreen : Form
+
     {
+        private DarkModeCS DM = null;
         public HomeScreen()
         {
             InitializeComponent();
+            DM = new DarkModeCS(this);
         }
 
         private void UserInformation_Load(object sender, EventArgs e)

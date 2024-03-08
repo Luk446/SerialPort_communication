@@ -80,6 +80,7 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="DarkModeCS.cs" />
     <Compile Include="Small.cs">
       <SubType>Form</SubType>
     </Compile>
