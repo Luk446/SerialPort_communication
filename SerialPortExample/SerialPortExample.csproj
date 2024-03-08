@@ -81,11 +81,11 @@
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="DarkModeCS.cs" />
-    <Compile Include="Small.cs">
+    <Compile Include="Small1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Small.Designer.cs">
-      <DependentUpon>Small.cs</DependentUpon>
+    <Compile Include="Small1.Designer.cs">
+      <DependentUpon>Small1.cs</DependentUpon>
     </Compile>
     <Compile Include="LargeMain.cs">
       <SubType>Form</SubType>
@@ -113,11 +113,17 @@
     <Compile Include="HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SmallHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallHome.Designer.cs">
+      <DependentUpon>SmallHome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Small.resx">
-      <DependentUpon>Small.cs</DependentUpon>
+    <EmbeddedResource Include="Small1.resx">
+      <DependentUpon>Small1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LargeMain.resx">
       <DependentUpon>LargeMain.cs</DependentUpon>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallHome.resx">
+      <DependentUpon>SmallHome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

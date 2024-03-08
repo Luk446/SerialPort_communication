@@ -15,10 +15,12 @@ namespace SerialPortExample
 
     {
         private DarkModeCS DM = null;
+
         public HomeScreen()
         {
             InitializeComponent();
-            DM = new DarkModeCS(this);
+            //DM = new DarkModeCS(this);
+            this.ActiveControl = null;
         }
 
         private void UserInformation_Load(object sender, EventArgs e)
@@ -28,8 +30,8 @@ namespace SerialPortExample
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Small form1 = new Small();
-            form1.Show();
+            SmallHome sHome = new SmallHome();
+            sHome.Show();
             this.Hide();
         }
 
@@ -52,6 +54,7 @@ namespace SerialPortExample
             Diagnostics diagnostics = new Diagnostics();
             diagnostics.Show();
             this.Hide();
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -59,6 +62,11 @@ namespace SerialPortExample
             About bout = new About();
             bout.Show();
             this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

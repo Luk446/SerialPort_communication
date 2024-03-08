@@ -1,18 +1,21 @@
-﻿using System;
+﻿using BlueMystic;
+using System;
 using System.IO.Ports;
 using System.Windows.Forms;
 
 namespace SerialPortExample
 {
-    public partial class Small : Form
+    public partial class Small1 : Form
     {
+        private DarkModeCS DM = null;
         //private SerialPort serialPort; (commented due to error causing)
 
-        public Small()
+        public Small1()
         {
             InitializeComponent();
             InitializeSerialPort();
             this.IsMdiContainer = true;
+            DM = new DarkModeCS(this);
         }
         //Serial Port Init
         // establish communication with arduino 
@@ -73,7 +76,7 @@ namespace SerialPortExample
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -81,15 +84,10 @@ namespace SerialPortExample
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This is the first Ver BRua");
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            HomeScreen userInformation = new HomeScreen();
-            userInformation.Show();
+            HomeScreen home = new HomeScreen();
+            home.Show();
             this.Hide();
             serialPort.Close();
         }
