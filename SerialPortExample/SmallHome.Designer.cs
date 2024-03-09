@@ -64,7 +64,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1074, 525);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1092, 572);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // label1
@@ -76,14 +76,14 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(743, 39);
+            this.label1.Size = new System.Drawing.Size(757, 38);
             this.label1.TabIndex = 12;
             this.label1.Text = "Small - Upper Menu";
             // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(966, 3);
+            this.button5.Location = new System.Drawing.Point(984, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(105, 37);
             this.button5.TabIndex = 13;
@@ -98,13 +98,14 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(752, 222);
+            this.button3.Location = new System.Drawing.Point(766, 247);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 105);
+            this.button3.Size = new System.Drawing.Size(212, 105);
             this.button3.TabIndex = 10;
             this.button3.TabStop = false;
             this.button3.Text = "High Power";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -112,13 +113,14 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(110, 222);
+            this.button1.Location = new System.Drawing.Point(112, 247);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 105);
+            this.button1.Size = new System.Drawing.Size(212, 105);
             this.button1.TabIndex = 9;
             this.button1.TabStop = false;
             this.button1.Text = "Complete Tutorial";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -126,13 +128,14 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(324, 222);
+            this.button2.Location = new System.Drawing.Point(332, 247);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 105);
             this.button2.TabIndex = 8;
             this.button2.TabStop = false;
             this.button2.Text = "High Precision";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -140,13 +143,14 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(538, 222);
+            this.button4.Location = new System.Drawing.Point(548, 247);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(208, 105);
+            this.button4.Size = new System.Drawing.Size(212, 105);
             this.button4.TabIndex = 14;
             this.button4.TabStop = false;
             this.button4.Text = "Regular Use";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
@@ -154,9 +158,9 @@
             this.label2.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.label2, 4);
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 111);
+            this.label2.Location = new System.Drawing.Point(112, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(850, 39);
+            this.label2.Size = new System.Drawing.Size(866, 38);
             this.label2.TabIndex = 15;
             this.label2.Text = "Acclimation Options";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 525);
+            this.ClientSize = new System.Drawing.Size(1092, 572);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SmallHome";
             this.Text = "SmallHome";

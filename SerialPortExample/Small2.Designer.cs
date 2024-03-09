@@ -1,6 +1,6 @@
 ﻿namespace SerialPortExample
 {
-    partial class Small1
+    partial class Small2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button2 = new System.Windows.Forms.Button();
@@ -40,12 +39,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.serialPort = new System.IO.Ports.SerialPort(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // serialPort
-            // 
-            this.serialPort.PortName = "COM3";
             // 
             // tableLayoutPanel1
             // 
@@ -75,14 +72,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1092, 572);
-            this.tableLayoutPanel1.TabIndex = 1;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // progressBar1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.progressBar1, 3);
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressBar1.Location = new System.Drawing.Point(112, 231);
+            this.progressBar1.Maximum = 300;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(648, 137);
             this.progressBar1.TabIndex = 0;
@@ -96,7 +93,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // textBox3
             // 
@@ -113,7 +110,6 @@
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Acclimation bar";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label1
             // 
@@ -134,45 +130,45 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(212, 137);
             this.textBox2.TabIndex = 9;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Nova Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(700, 371);
+            this.label2.Location = new System.Drawing.Point(623, 371);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 36);
+            this.label2.Size = new System.Drawing.Size(137, 36);
             this.label2.TabIndex = 11;
-            this.label2.Text = "100";
+            this.label2.Text = "250    300";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.button1, 2);
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(679, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(167, 57);
             this.button1.TabIndex = 12;
             this.button1.Text = "BEGIN";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 2);
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(112, 62);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(430, 160);
             this.textBox1.TabIndex = 13;
-            this.textBox1.Text = "Attempt to maintain a force level of 80 - After starting, every five seconds the " +
-    "force will be printed\r\nMaintain for as long as you like or move on to another fo" +
-    "rce setting\r\n";
+            this.textBox1.Text = "Attempt to maintain a force level of 250 \r\nAfter starting, every five seconds the" +
+    " force will be printed. Maintain for as long as you like or move on to another f" +
+    "orce setting\r\n";
             // 
             // textBox4
             // 
@@ -190,28 +186,41 @@
             this.textBox4.Text = "Print Feed";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Small1
+            // serialPort
+            // 
+            this.serialPort.PortName = "COM3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(648, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(11, 144);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n";
+            // 
+            // Small2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 572);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.IsMdiContainer = true;
-            this.Name = "Small1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Small2";
+            this.Text = "Small2";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.IO.Ports.SerialPort serialPort;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
@@ -219,6 +228,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
+        private System.IO.Ports.SerialPort serialPort;
+        private System.Windows.Forms.Label label3;
     }
 }
-

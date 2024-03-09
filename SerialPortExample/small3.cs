@@ -1,18 +1,20 @@
 ﻿using BlueMystic;
 using System;
+using System.Drawing;
 using System.IO.Ports;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace SerialPortExample
 {
-    public partial class Small1 : Form
+    public partial class Small3 : Form
     {
         private DarkModeCS DM = null;
         //private SerialPort serialPort;
         private Timer updateTimer;
         private string latestSerialData = string.Empty;
 
-        public Small1()
+        public Small3()
         {
             InitializeComponent();
             this.IsMdiContainer = true;
@@ -65,7 +67,7 @@ namespace SerialPortExample
             {
                 if (int.TryParse(data, out int magnitude))
                 {
-                    int normalizedMagnitude = Math.Min(100, Math.Max(0, magnitude));
+                    int normalizedMagnitude = Math.Min(1023, Math.Max(0, magnitude));
                     progressBar1.Value = normalizedMagnitude;
                 }
             }
@@ -83,26 +85,15 @@ namespace SerialPortExample
             }
         }
 
-        // Button click event to start serial port communication and timer
-        private void button1_Click(object sender, EventArgs e)
-        {
-            InitializeSerialPort();
-            InitializeTimer();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
+            InitializeSerialPort();
+            InitializeTimer();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -114,16 +105,6 @@ namespace SerialPortExample
             {
                 serialPort.Close();
             }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

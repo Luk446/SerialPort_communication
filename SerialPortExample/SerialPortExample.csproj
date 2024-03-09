@@ -113,6 +113,18 @@
     <Compile Include="HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Small2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Small2.Designer.cs">
+      <DependentUpon>Small2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Small3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Small3.Designer.cs">
+      <DependentUpon>Small3.cs</DependentUpon>
+    </Compile>
     <Compile Include="SmallHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Small2.resx">
+      <DependentUpon>Small2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Small3.resx">
+      <DependentUpon>Small3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SmallHome.resx">
       <DependentUpon>SmallHome.cs</DependentUpon>
