@@ -51,8 +51,22 @@ namespace SerialPortExample
 
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            latestSerialData = serialPort.ReadLine();
-            UpdateProgressBar(latestSerialData);
+            string incomingData = serialPort.ReadLine();
+
+            // Check if the data starts with "PV: "
+            if (incomingData.StartsWith("PV: "))
+            {
+                // Extract the numerical value after "PV: "
+                string dataValue = incomingData.Substring(4); // Skip the first 4 characters ("PV: ")
+
+                // Update the latestSerialData if the data is a valid integer
+                if (int.TryParse(dataValue, out int potValue))
+                {
+                    latestSerialData = potValue.ToString();
+                    UpdateProgressBar(latestSerialData);
+                    UpdateTextBox(latestSerialData);
+                }
+            }
         }
 
         private void UpdateProgressBar(string data)
