@@ -8,7 +8,6 @@ namespace SerialPortExample
     public partial class Small1 : Form
     {
         private DarkModeCS DM = null;
-        //private SerialPort serialPort;
         private Timer updateTimer;
         private string latestSerialData = string.Empty;
 
@@ -64,7 +63,6 @@ namespace SerialPortExample
                 {
                     latestSerialData = potValue.ToString();
                     UpdateProgressBar(latestSerialData);
-                    UpdateTextBox(latestSerialData);
                 }
             }
         }

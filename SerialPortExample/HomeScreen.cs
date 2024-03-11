@@ -19,7 +19,7 @@ namespace SerialPortExample
         public HomeScreen()
         {
             InitializeComponent();
-            //DM = new DarkModeCS(this);
+            DM = new DarkModeCS(this);
             this.ActiveControl = null;
         }
 

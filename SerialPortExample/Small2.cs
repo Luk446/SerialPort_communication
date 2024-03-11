@@ -67,7 +67,6 @@ namespace SerialPortExample
                 {
                     latestSerialData = potValue.ToString();
                     UpdateProgressBar(latestSerialData);
-                    UpdateTextBox(latestSerialData);
                 }
             }
         }
