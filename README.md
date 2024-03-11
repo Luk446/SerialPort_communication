@@ -6,6 +6,6 @@ The aim of the app is to improve the user experience in the acclimation period f
 Currently the project is in first release, with basic functionality achieved.
 Although still very much in beta with boundless room for improvement.
 
-A build has been published and is avilable for download upon request.
+A build has been published and is avilable for download upon request (although the app can be operated by opening in Visual Studio)
 
 > Visual enhancement (dark mode) darkmode.cs from - https://github.com/BlueMystical/Dark-Mode-Forms
