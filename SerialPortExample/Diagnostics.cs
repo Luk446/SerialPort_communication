@@ -33,6 +33,7 @@ namespace SerialPortExample
                 string tempValue = data.Substring(4); // Extract the temperature value
                 UpdateTextBox(tempValue);
             }
+            // second timer
             else if (data.StartsWith("TV2: "))
             {
                 string tempValue2 = data.Substring(5);
