@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO.Ports;
 using System.Windows.Forms;
 
@@ -6,7 +7,6 @@ namespace SerialPortExample
 {
     public partial class Diagnostics : Form
     {
-        //private SerialPort serialPort;
 
         public Diagnostics()
         {
@@ -33,6 +33,11 @@ namespace SerialPortExample
                 string tempValue = data.Substring(4); // Extract the temperature value
                 UpdateTextBox(tempValue);
             }
+            else if (data.StartsWith("TV2: "))
+            {
+                string tempValue2 = data.Substring(5);
+                UpdateTextBox2(tempValue2);
+            }
         }
 
         private void UpdateTextBox(string data)
@@ -46,6 +51,18 @@ namespace SerialPortExample
                 label8.Text = data;
             }
         }
+        private void UpdateTextBox2(string data)
+        {
+            if (label10.InvokeRequired)
+            {
+                label10.Invoke(new Action<string>(UpdateTextBox2), data);
+            }
+            else
+            {
+                label10.Text = data;
+            }
+        }
+
 
         private void label5_Click(object sender, EventArgs e)
         {
