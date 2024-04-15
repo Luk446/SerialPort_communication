@@ -24,12 +24,18 @@ namespace SerialPortExample
 
         private void InitializeSerialPort()
         {
-            serialPort = new SerialPort();
-            serialPort.PortName = "COM3";
-            serialPort.BaudRate = 9600;
-
-            serialPort.DataReceived += SerialPort_DataReceived;
-            serialPort.Open();
+            if (serialPort.IsOpen == false)
+            {
+                serialPort = new SerialPort();
+                serialPort.PortName = "COM3";
+                serialPort.BaudRate = 9600;
+                serialPort.DataReceived += SerialPort_DataReceived;
+                serialPort.Open();
+            }
+            else
+            {
+                MessageBox.Show("Already defined");
+            }
         }
 
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)

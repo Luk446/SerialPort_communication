@@ -19,14 +19,20 @@ namespace SerialPortExample
             InitializeComponent();
             this.IsMdiContainer = true;
         }
-
         private void InitializeSerialPort()
         {
-            serialPort = new SerialPort();
-            serialPort.PortName = "COM3";
-            serialPort.BaudRate = 9600;
-            serialPort.DataReceived += SerialPort_DataReceived;
-            serialPort.Open();
+            if (serialPort.IsOpen == false)
+            {
+                serialPort = new SerialPort();
+                serialPort.PortName = "COM3";
+                serialPort.BaudRate = 9600;
+                serialPort.DataReceived += SerialPort_DataReceived;
+                serialPort.Open();
+            }
+            else
+            {
+                MessageBox.Show("Already defined");
+            }
         }
 
         private void InitializeTimer()
