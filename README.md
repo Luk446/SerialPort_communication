@@ -15,6 +15,8 @@ A build has been published and is avilable for download upon request (although t
 Ideally the app would have generated a hardware failure report when the temperature exceeded a certain level or when the electronics failed, this would be tied in with other internal hidden data. The framework for this did end up being developed but as the duty cycle testing app, with this the functionality could be implemented with relative ease, perhaps.
 
 
+# Pre-reqs
+
 Before running either program it is important that the arduino is attached to COM port 3. This is relatively easy and is done with the following steps
 
 - press WIN + R
